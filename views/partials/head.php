@@ -24,6 +24,6 @@
     <link rel="stylesheet" href="css/style.css" />
 
     <title>
-      Property &mdash; Free Bootstrap 5 Website Template by Untree.co
+      Kerja Yuk &mdash; Temukan Pekerjaan Impianmu
     </title>
   </head>
