@@ -60,6 +60,7 @@ class Router {
 
 
     /**
+     * Get Error Page
      * @param int $httpCode
      * 
      * @return void

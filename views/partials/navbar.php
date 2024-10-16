@@ -16,7 +16,7 @@
         <ul
             class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end"
         >
-            <li class="active"><a href="#">Beranda</a></li>
+            <li class="active"><a href="/">Beranda</a></li>
             <li class="has-children">
                 <a href="#">Daftar Pekerjaan</a>
                 <ul class="dropdown">
