@@ -63,7 +63,7 @@
           <div class="col-12">
             <div class="property-slider-wrap">
               <div class="property-slider">
-
+                <?php foreach($listings as $list) : ?>
                 <div class="property-item">
                     <a href="#" class="img">
                       <img src="images/img_1.jpg" alt="Image" class="img-fluid" />
@@ -71,35 +71,38 @@
 
                   <div class="property-content">  
                     <div class="price mb-2">
-                      <span>Rp 5,291,000</span>
+                      <span><?= rupiahFormat($list->salary)?></span>
                     </div>
                     <div>
                       <span class="d-block mb-2 text-black-50">
-                        Deskripsi Pekerjaan Disini
+                        <?= $list->description ?>
                       </span>
-                      <span class="city d-block mb-2">Nama Perusahaan</span>
-
-                      <div class="specs d-flex mb-4">
-                        <span class="d-block d-flex align-items-center me-3">
-                          <span class="icon-bed me-2"></span>
-                          <span class="caption">BPJS</span>
-                        </span>
-                        <span class="d-block d-flex align-items-center">
-                          <span class="icon-bath me-2"></span>
-                          <span class="caption">Asuransi</span>
-                        </span>
+                      <span class="city d-block"><?= $list->job_title ?></span>
+                      <span class="d-block mb-2 text-black-50">
+                        <?= $list->company ?>
+                      </span>
+                      <div class="mb-3">
+                        <?php 
+                          $benefits = explode(',', $list->benefits);
+                          // print_r($benefits);
+                          foreach($benefits as $benefit) :
+                        ?>
+                          <span class="d-block">
+                            <!-- <span class="icon-tag me-2"></span> -->
+                            <span class="badge bg-success mb-1"><?= $benefit ?></span>
+                          </span>
+                        <?php endforeach; ?>
                       </div>
 
                       <a
-                        href="#"
-                        class="btn btn-primary py-2 px-3"
-                        >Lihat Detail</a
-                      >
+                        href="/listings/<?= $list->id?>"
+                        class="btn btn-sm btn-primary py-2 px-4"
+                        >Lihat Detail</a>
                     </div>
                   </div>
                 </div>
                 <!-- .item -->
-
+                <?php endforeach; ?>
               </div>
 
               <div

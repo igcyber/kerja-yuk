@@ -16,12 +16,13 @@
   * 
   * @return void
   */
- function loadView($name)
+ function loadView($name, $data = [])
  {
    $viewPath = basePath("views/{$name}.php");
 
    if(file_exists($viewPath))
    {
+      extract($data);
       require $viewPath;
    }else{
       echo "View {$viewPath} not found";
@@ -68,4 +69,14 @@
     echo "<pre>";
     die(var_dump($value));
     echo "</pre>";
+ }
+
+
+ /**
+  * @param int $value
+  * 
+  * @return string
+  */
+ function rupiahFormat($value){
+   return 'Rp '. number_format($value,0,'','.');
  }
