@@ -1,20 +1,19 @@
 <div class="site-footer">
     <div class="row">
         <div class="col-12 text-center">
-        <p>
-            Copyright &copy;
-            <script>
-            document.write(new Date().getFullYear());
-            </script>
-            . All Rights Reserved. &mdash; Designed with love by
-            <a href="https://untree.co">Untree.co</a>
-            <!-- License information: https://untree.co/license/ -->
-        </p>
+            <p>
+                Copyright Template &copy;
+                <script>
+                document.write(new Date().getFullYear());
+                </script>
+                . All Rights Reserved. &mdash; Designed with love by
+                <a href="https://untree.co">Untree.co</a>
+                <!-- License information: https://untree.co/license/ -->
+            </p>
             <div>
-                Distributed by
-                <a href="https://themewagon.com/" target="_blank">themewagon</a>
+                App developed by
+                <a href="https://themewagon.com/" target="_blank">Aji Bagaskara</a>
             </div>
-        </div>
         </div>
     </div>
     <!-- /.container -->

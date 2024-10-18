@@ -1,4 +1,4 @@
-  <?php loadPartial('head');?>
+<?php loadPartial('head');?>
   <body>
     <?php loadPartial('navbar');?>
 
@@ -6,7 +6,7 @@
       <div class="hero-slide">
         <div
           class="img overlay"
-          style="background-image: url('images/hero_bg_3.jpg')"
+          style="background-image: url('images/bg-home.jpg')"
         ></div>
       </div>
 
@@ -66,36 +66,35 @@
                 <?php foreach($listings as $list) : ?>
                 <div class="property-item">
                     <a href="#" class="img">
-                      <img src="images/img_1.jpg" alt="Image" class="img-fluid" />
+                      <img src="<?= $list->company_logo ? 'images/'.$list->company_logo : 'https://placehold.co/500x500' ?>" alt="Image" class="img-fluid" />
                     </a>
 
                   <div class="property-content">  
                     <div class="price mb-2">
-                      <span><?= rupiahFormat($list->salary)?></span>
+                      <span class="city d-block"><?= $list->job_title ?></span>
                     </div>
                     <div>
                       <span class="d-block mb-2 text-black-50">
                         <?= $list->description ?>
                       </span>
-                      <span class="city d-block"><?= $list->job_title ?></span>
                       <span class="d-block mb-2 text-black-50">
-                        <?= $list->company ?>
+                      <span>Gaji : <?= rupiahFormat($list->salary)?></span>
                       </span>
-                      <div class="mb-3">
+                      <div class="mb-1">
+                        Benefit Lainnya : 
                         <?php 
-                          $benefits = explode(',', $list->benefits);
-                          // print_r($benefits);
+                          $benefits = explode(',', $list->benefits); 
                           foreach($benefits as $benefit) :
                         ?>
-                          <span class="d-block">
-                            <!-- <span class="icon-tag me-2"></span> -->
-                            <span class="badge bg-success mb-1"><?= $benefit ?></span>
+                          <span class="d-block me-2">
+                          <!-- <i class="fa-solid fa-check"></i> -->
+                            <span class="icon-check"><?= trim($benefit) ?></span>
                           </span>
                         <?php endforeach; ?>
                       </div>
-
+                      <span class="city d-block mb-3"> <?= $list->company ?></span>
                       <a
-                        href="/listings/<?= $list->id?>"
+                        href="/listing?id=<?= $list->id?>"
                         class="btn btn-sm btn-primary py-2 px-4"
                         >Lihat Detail</a>
                     </div>

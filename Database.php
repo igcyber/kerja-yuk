@@ -27,10 +27,16 @@ class Database {
      * 
      * @return string
      */
-    public function requestQuery($query)
+    public function requestQuery($query, $params = [])
     {
         try{
             $stm = $this->conn->prepare($query);
+
+            // Bind named params
+            foreach($params as $param => $value){
+                $stm->bindValue(':'.$param , $value);
+            }
+
             $stm->execute();
             return $stm;
         }catch(PDOException $e){
