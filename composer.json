@@ -1,0 +1,16 @@
+{
+    "name" : "igcyber/kerja-yuk",
+    "description": "Aplikasi Daftar Lowongan Kerja",
+    "authors": [
+        {
+            "name" : "Aji Bagaskara",
+            "email" : "ajibagaskara08@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Framework\\": "Framework/",
+            "App\\" : "App/"
+        }
+    }
+}
