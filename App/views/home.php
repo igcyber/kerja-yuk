@@ -94,7 +94,7 @@
                       </div>
                       <span class="city d-block mb-3"> <?= $list->company ?></span>
                       <a
-                        href="/listing?id=<?= $list->id?>"
+                        href="/listing/<?= $list->id?>"
                         class="btn btn-sm btn-primary py-2 px-4"
                         >Lihat Detail</a>
                     </div>
