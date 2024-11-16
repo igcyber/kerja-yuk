@@ -68,11 +68,15 @@
             </p>
 
             <a  href="mailto:<?= $listing->email ?>" class="btn btn-sm btn-primary py-2 px-4">Lamar Sekarang</a>
-
+            <a href="#" class="btn btn-sm btn-info py-2 px-4 text-white">Edit</a>
+            <form action="" method="POST" class="d-inline">
+              <input type="hidden" name="_method" value="DELETE">
+              <button type="submit" class="btn btn-sm btn-danger py-2 px-4 text-white">Hapus</button>
+            </form>
             <div class="d-block agent-box p-5">
               <div class="img mb-3">
                 <img
-                  src="<?= $listing->company_logo ? 'images/'.$listing->company_logo : 'https://placehold.co/500x500' ?>"
+                  src="<?= $listing->company_logo ? '/uploads'.'/'.$listing->company_logo : 'https://placehold.co/500x500' ?>"
                   alt="Image"
                   class="img-fluid"
                 />

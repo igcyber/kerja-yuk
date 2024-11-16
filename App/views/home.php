@@ -2,6 +2,7 @@
   <body>
     <?php loadPartial('navbar');?>
 
+    <!-- content here -->
     <div class="hero">
       <div class="hero-slide">
         <div
@@ -66,7 +67,7 @@
                 <?php foreach($listings as $list) : ?>
                 <div class="property-item">
                     <a href="#" class="img">
-                      <img src="<?= $list->company_logo ? 'images/'.$list->company_logo : 'https://placehold.co/500x500' ?>" alt="Image" class="img-fluid" />
+                      <img src="<?= $list->company_logo ? 'uploads/'.$list->company_logo : 'https://placehold.co/412x256' ?>" alt="Image" class="img-fluid" />
                     </a>
 
                   <div class="property-content">  
@@ -137,7 +138,7 @@
           <h2 class="mb-4">Sedang Mencari Talenta Baru Untuk Kebutuhan Anda</h2>
           <p>
             <a
-              href="/listings/create"
+              href="/listing/create"
               target="_blank"
               class="btn btn-primary text-white py-3 px-4"
               >Buat Lowongan Sekarang</a

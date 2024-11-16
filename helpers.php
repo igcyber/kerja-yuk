@@ -80,3 +80,19 @@
  function rupiahFormat($value){
    return 'Rp '. number_format($value,0,'','.');
  }
+
+ /**
+  * Sanitizes request
+  * @param string $dirty
+  * 
+  * @return mixed
+  */
+ function sanitize($dirty){
+   return filter_var(trim($dirty), FILTER_SANITIZE_SPECIAL_CHARS);
+ }
+
+ function redirect($url)
+ {
+   header("Location: $url");
+   exit;
+ }
